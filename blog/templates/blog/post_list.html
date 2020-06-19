@@ -24,6 +24,8 @@
                                 </div>
                                 <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
                                 <p>{{ post.teaser|linebreaksbr }}</p>
+                                <p>{{ post.time|linebreaksbr }}</p>
+                                <p>{{ post.niveau|linebreaksbr }}</p>
                             </div>
                         {% endfor %}
                     {% endblock %}
