@@ -23,6 +23,11 @@
                                     {{ post.published_date }}
                                 </div>
                                 <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+                                <div>
+                                    {% if post.cover %}
+                                    <img src="{{post.cover.url}}" alt="post.cover"style="width:500px;height:400px;">
+                                    {% endif %}
+                                </div>
                                 <p>{{ post.teaser|linebreaksbr }}</p>
                                 <p>{{ post.time|linebreaksbr }}</p>
                                 <p>{{ post.niveau|linebreaksbr }}</p>
