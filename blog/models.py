@@ -15,6 +15,7 @@ class Post(models.Model):
     niveau = models.CharField(max_length=200)
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
+    cover = models.ImageField(upload_to='media/images/', blank=True, null=True)
 
     def publish(self):
         self.published_date = timezone.now()

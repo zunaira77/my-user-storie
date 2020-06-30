@@ -43,3 +43,12 @@ def post_edit(request, pk):
     else:
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
+
+#def upload(request):
+    #context = {}
+    #if request.method == 'POST':
+        #uploaded_file = request.FILES['document']
+        #fs = FileSystemStorage()
+        #name = fs.save(uploaded.file.name, uploaded_file)
+        #context['url'] = fs.url(name)
+    #return render(request, 'upload.html', context)
