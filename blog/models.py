@@ -12,7 +12,7 @@ class Post(models.Model):
     text = models.TextField()
     teaser = models.CharField(max_length=200)
     time = models.CharField(max_length=200)
-    niveau = models.CharField(max_length=200)
+    niveau = models.CharField(max_length=200, choices=[('Niveau: Einfach','Einfach'),('Niveau: Mittel','Mittel'),('Niveau: Schwer','Schwer'),])
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
     cover = models.ImageField(upload_to='media/images/', blank=True, null=True)
