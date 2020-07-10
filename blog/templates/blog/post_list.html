@@ -23,6 +23,9 @@
                                     {{ post.published_date }}
                                 </div>
                                 <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+                                <div class="rating">
+                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                                    </div>
                                 <div>
                                     {% if post.cover %}
                                     <img src="{{post.cover.url}}" alt="post.cover"style="width:500px;height:400px;">
