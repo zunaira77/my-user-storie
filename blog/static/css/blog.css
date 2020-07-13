@@ -24,7 +24,8 @@ h1 {
 }
 
 h2, h3, h4 {
-    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-family: Blippo, fantasy;
+  font-style: italic;
     color: #6B8E23
 }
 
