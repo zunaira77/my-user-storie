@@ -61,3 +61,7 @@ img {
     max-width: 100%;
     object-fit: contain;
 }
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: #000000;
+}
