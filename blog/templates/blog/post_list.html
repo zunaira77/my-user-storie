@@ -17,10 +17,21 @@
             <div class="row">
                 <div class="col-md-8">
                     {% block content %}
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Niveau - Kategorien
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            {% for choice in niveau_choices %}
+                            <a class="dropdown-item" href="?niveau={{ choice.0 }}">{{ choice.1 }}</a>
+                            {% endfor %}
+                        </div>
+                        
+                    </div>
                         {% for post in posts %}
                             <div class="post">
                                  <div class="date">
-                                    {{ post.published_date }}
+                                    {{ post.published_date }} | {{ post.get_niveau_display }}
                                 </div>
                                 <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
                                 <div>
@@ -31,6 +42,7 @@
                                 <p>{{ post.teaser|linebreaksbr }}</p>
                                 <p>{{ post.time|linebreaksbr }}</p>
                                 <p>{{ post.niveau|linebreaksbr }}</p>
+                                <p>{{ post.author|linebreaksbr }}</p>
                             </div>
                         {% endfor %}
                     {% endblock %}

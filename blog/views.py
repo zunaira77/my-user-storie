@@ -7,8 +7,11 @@ from .forms import PostForm
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    return render(request, 'blog/post_list.html', {'posts': posts})
-    
+    niveau = request.GET.get('niveau')
+    if niveau:
+        posts = posts.filter(niveau=niveau)
+    return render(request, 'blog/post_list.html', {'posts': posts, 'niveau_choices': Post.NIVEAU_CHOICES})
+
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request, 'blog/post_detail.html', {'post': post})
