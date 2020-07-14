@@ -19,13 +19,14 @@
                     {% block content %}
                     <div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Filter by Niveau
+                        Niveau - Kategorien
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             {% for choice in niveau_choices %}
                             <a class="dropdown-item" href="?niveau={{ choice.0 }}">{{ choice.1 }}</a>
                             {% endfor %}
                         </div>
+                        
                     </div>
                         {% for post in posts %}
                             <div class="post">
