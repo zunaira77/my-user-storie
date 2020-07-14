@@ -25,11 +25,7 @@ h1 {
 
 h2, h3, h4 {
     font-family: Blippo, fantasy;
-<<<<<<< HEAD
     font-style: italic;
-=======
-  font-style: italic;
->>>>>>> 6c82b65af0bba34fc051dbf089cf6629a61f2a7f
     color: #6B8E23
 }
 
@@ -66,10 +62,6 @@ img {
     max-width: 100%;
     object-fit: contain;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 6c82b65af0bba34fc051dbf089cf6629a61f2a7f
 body{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: #000000;
